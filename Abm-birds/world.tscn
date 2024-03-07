@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgriyd1nlh7f"]
+
+[ext_resource type="Script" path="res://GameManager.gd" id="2_epfdy"]
+[ext_resource type="Script" path="res://Bird.gd" id="2_q1vlf"]
+
+[node name="World" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Game Manager" type="Node" parent="." node_paths=PackedStringArray("topLeft", "bottomRight")]
+script = ExtResource("2_epfdy")
+cellCountX = 20
+cellCountY = 20
+topLeft = NodePath("TopLeftCorner")
+bottomRight = NodePath("TopRightCorner")
+
+[node name="TopLeftCorner" type="Node2D" parent="Game Manager"]
+position = Vector2(-500, -250)
+
+[node name="TopRightCorner" type="Node2D" parent="Game Manager"]
+position = Vector2(500, 250)
+
+[node name="Bird" type="Node2D" parent="."]
+script = ExtResource("2_q1vlf")
