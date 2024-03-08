@@ -12,6 +12,12 @@ extends Node2D
 const temperatureMin : int = 10;
 const temperatureMax : int = 90;
 
+# Uses GameManager script
+var gm : Node;
+
+func Initialize(gameManager, index: int, idealWintering : Vector2, idealBreeding : Vector2):
+	gm = gameManager;
+
 # Represents the bird’s current state that shows 
 # us whether the bird is staying in one place or 
 # currently traveling. 
