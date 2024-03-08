@@ -20,7 +20,7 @@ var yDelta;
 
 var birdPrefab = preload("res://bird.tscn");
 var birds = [];
-var birdsTaggedToMove = [];
+var birdsTaggedToMove = []; # Array of indexes for birds that must be animated 
 
 @export_category("Animation")
 @export var animationTime : float;
@@ -169,4 +169,3 @@ func GenerateBirdAtRandCell():
 		index, 
 		cells[randX][randY].position,  			# Wintering
 		cells[randTargX][randTargY].position);	# Breeding 
-

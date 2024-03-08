@@ -38,7 +38,7 @@ func StateMachine():
 func Migrate():
 	pass;
 	
-func Feat():
+func Feast():
 	pass;
 
 func Breed():
